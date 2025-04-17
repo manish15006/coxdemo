@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-lg p-4 text-center">
+            <h2 class="mb-3 ">Welcome to Cox Communications!</h2>
+            <p>With the help of our intuitive web app, clients, employees, and new joiners can effortlessly access Cox's internal websites. This user-friendly platform ensures that everyone can navigate to the necessary resources and tools independently, tailored to their specific tasks and roles. Whether you're managing projects, seeking information, or completing daily tasks, our web app provides seamless access to everything you need.</p>
+            <a href="{{ url_for('home') }}" class="btn btn-primary mt-3">Home</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

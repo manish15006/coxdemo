@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="card shadow-lg p-5">
+    <h1 class="mb-4 fw-bold text-center">Welcome to your COX App!</h1>
+    <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-3">
+            <h4 class="fw-bold lead text-white">Deployment Tools</h4>
+            <div class="list-group mb-3 shadow-lg">
+                <a href="{{ url_for('pipeline') }}" class="list-group-item list-group-item-action">Pipeline</a>
+                <a href="{{ url_for('rancher') }}" class="list-group-item list-group-item-action">Rancher</a>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <h4 class="fw-bold lead text-white">Monitoring Tools</h4>
+            <div class="list-group mb-3 shadow-lg">
+                <a href="{{ url_for('splunck') }}" class="list-group-item list-group-item-action">Splunck</a>
+                <a href="{{ url_for('newrelic') }}" class="list-group-item list-group-item-action">NewRelic</a>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <h4 class="fw-bold lead text-white">GitRepos</h4>
+            <div class="list-group mb-3 shadow-lg">
+                <a href="{{ url_for('stash') }}" class="list-group-item list-group-item-action">Stash</a>
+                <a href="{{ url_for('infraconfig') }}" class="list-group-item list-group-item-action">InfraConfig</a>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <h4 class="fw-bold lead text-white">Documentation Tools</h4>
+            <div class="list-group mb-3 shadow-lg">
+                <a href="{{ url_for('swagger') }}" class="list-group-item list-group-item-action">Swagger</a>
+                <a href="{{ url_for('sharepoint') }}" class="list-group-item list-group-item-action">SharePoint</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

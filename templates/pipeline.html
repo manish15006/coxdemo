@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Pipeline{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-lg p-4">
+            <h2 class="mb-3 lead">Please select the external website from the below list :</h2>
+            <ul class="list-group list-group-flush mb-3">
+                {% for endpoint in endpoints %}
+                <li class="list-group-item bg-light shadow-mb-3">
+                    <a class="text-dark text-decoration-none"   href="{{ base_url }}/{{ endpoint }}" target="_blank">{{ endpoint | capitalize }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+            <a href="{{ url_for('home') }}" class="btn btn-primary mt-3">Home</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
